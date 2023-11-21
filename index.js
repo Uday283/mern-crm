@@ -16,7 +16,7 @@ const app = express();
 dotenv.config();
 app.use(
     cors({
-      origin: process.env.cros_url,
+      origin:'http://localhost:3000',
       credentials: true,
     })
   );
@@ -69,7 +69,7 @@ app.post('/register',(req,res)=> {
 app.use('/', Routes);
 
 
-const PORT = process.env.PORT||8000;
+const PORT =8000;
 
 Connection();
 // Connection1();
